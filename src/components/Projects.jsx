@@ -42,7 +42,8 @@ const Projects = () => {
         "MySQL",
       ],
       githubLink: "https://github.com/Bhumika1104/codeverse-learning-portal",
-      demoVideo: "https://youtube.com/demo2",
+      demoVideo:
+        "https://drive.google.com/file/d/1INIJDxTVewjFc_bL9nWrk6tyfTgSM2eo/view?usp=sharing",
       screenshots: [
         "https://github.com/Bhumika1104/codeverse-learning-portal/raw/main/screenshots/1.jpg",
         "https://github.com/Bhumika1104/codeverse-learning-portal/raw/main/screenshots/3.jpg",
@@ -65,7 +66,8 @@ const Projects = () => {
         "A responsive pixel-perfect e-commerce frontend replica featuring product listings and dynamic shopping cart UI.",
       techStack: ["React", "React Bootstrap", "CSS3", "HTML5"],
       githubLink: "https://github.com/Bhumika1104/amazon-clone-react",
-      demoVideo: null,
+      demoVideo:
+        "https://drive.google.com/file/d/1rOegsrjQcowKHSbzNi46EdG4tIFM9n1E/view?usp=sharing",
       screenshots: [
         "https://github.com/Bhumika1104/amazon-clone-react/raw/main/screenshots/ss0.png",
         "https://github.com/Bhumika1104/amazon-clone-react/raw/main/screenshots/ss1.png",
