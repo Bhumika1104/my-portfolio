@@ -1,16 +1,63 @@
-# React + Vite
+# 🚀 React & Bootstrap Developer Portfolio | Bhumika Patil
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Welcome to my personal frontend developer portfolio! Built with **React** and styled using **Bootstrap**, this responsive single-page web application showcases my projects, technical skills, background, and contact details.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🌐 Live Demo & Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔗 **Live Website:** [https://my-portfolio-kohl-two-10.vercel.app](https://my-portfolio-kohl-two-10.vercel.app)
+- ☁️ **Deployment Platform:** Vercel
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack & Tools
+
+- **Frontend:** React.js, JavaScript (ES6+), HTML5, CSS3
+- **Styling Framework:** Bootstrap 5
+- **Build Tool:** Vite
+- **Version Control:** Git & GitHub
+- **Deployment:** Vercel
+
+---
+
+## ✨ Key Features
+
+- 📱 **Fully Responsive:** Styled using Bootstrap grid system to ensure perfect layout across mobile, tablet, and desktop screens.
+- ⚡ **High Performance:** Lightning-fast loading speeds powered by Vite.
+- 📄 **Resume Integration:** Direct access to view and download the latest resume.
+- 🎨 **Clean & Modern UI:** Interactive components, smooth navigation, and clean layout design.
+- 🎯 **Core Sections:**
+  - **Hero Section:** Introduction, key highlights, and direct call-to-actions.
+  - **Skills:** Detailed frontend and technical competencies.
+  - **Experience & Education:** Career background and academic achievements.
+  - **Projects:** Showcases responsive web applications and interactive UI components.
+  - **Contact:** Convenient section for recruiter and networking connections.
+
+---
+
+## 📂 Project Structure
+
+```text
+Portofilo/
+├── public/
+│   ├── favicon.svg
+│   ├── resume.pdf
+│   └── icons.svg
+├── src/
+│   ├── assets/       # Images and icon assets
+│   ├── components/   # Modular React components
+│   │   ├── Hero.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Experince.jsx
+│   │   ├── Education.jsx
+│   │   ├── Projects.jsx
+│   │   └── Contact.jsx
+│   ├── App.jsx       # Main layout component
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx      # Entry point
+├── package.json
+├── vite.config.js
+└── README.md
