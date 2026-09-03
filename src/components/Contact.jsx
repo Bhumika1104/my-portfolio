@@ -25,18 +25,32 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // WhatsApp Message Text Formatter
     const textMessage = `Hello Bhumika,%0A%0AI visited your portfolio and wanted to connect:%0A%0A👤 *Name:* ${encodeURIComponent(
       formData.name,
     )}%0A📧 *Email:* ${encodeURIComponent(
       formData.email,
     )}%0A💬 *Message:* ${encodeURIComponent(formData.message)}`;
 
-    // Open WhatsApp Link
     const whatsappUrl = `https://wa.me/${MY_WHATSAPP_NUMBER}?text=${textMessage}`;
     window.open(whatsappUrl, "_blank");
 
     setFormData({ name: "", email: "", message: "" });
+  };
+
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+    const email = "bhumikapatil0411@gmail.com";
+
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      window.location.href = `mailto:${email}`;
+    } else {
+      window.open(
+        `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`,
+        "_blank",
+      );
+    }
   };
 
   const contactList = [
@@ -44,10 +58,10 @@ const Contact = () => {
       id: 1,
       title: "Email",
       value: "bhumikapatil0411@gmail.com",
-      link: "https://mail.google.com/mail/?view=cm&fs=1&to=bhumikapatil0411@gmail.com",
+      link: "mailto:bhumikapatil0411@gmail.com",
       icon: <FaEnvelope />,
       color: "#38bdf8",
-      isExternal: true,
+      onClick: handleEmailClick,
     },
     {
       id: 2,
@@ -88,7 +102,6 @@ const Contact = () => {
         </p>
 
         <Row className="g-4">
-          {/* LEFT SIDE: CONTACT DETAILS */}
           <Col
             xs={12}
             lg={5}
@@ -99,6 +112,7 @@ const Contact = () => {
                 <a
                   key={item.id}
                   href={item.link}
+                  onClick={item.onClick ? item.onClick : undefined}
                   target={item.isExternal ? "_blank" : "_self"}
                   rel={item.isExternal ? "noopener noreferrer" : undefined}
                   className="contact-item-link"
@@ -120,7 +134,6 @@ const Contact = () => {
             </div>
           </Col>
 
-          {/* RIGHT SIDE: WHATSAPP FORM CARD */}
           <Col xs={12} lg={7}>
             <Card className="contact-form-card p-4">
               <h4 className="text-white mb-3">Send a Message</h4>
