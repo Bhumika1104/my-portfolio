@@ -7,7 +7,7 @@ Welcome to my personal frontend developer portfolio! Built with **React** and st
 
 ## 🌐 Live Demo & Preview
 
-- 🔗 **Live Website:** [https://my-portfolio-kohl-two-10.vercel.app](https://my-portfolio-kohl-two-10.vercel.app)
+- 🔗 **Live Website:** [https://bhumika-patil-portfilo.vercel.app/](https://bhumika-patil-portfilo.vercel.app/)
 - ☁️ **Deployment Platform:** Vercel
 
 ---
