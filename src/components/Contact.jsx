@@ -26,7 +26,11 @@ const Contact = () => {
     e.preventDefault();
 
     // WhatsApp Message Text Formatter
-    const textMessage = `Hello Bhumika,%0A%0AI visited your portfolio and wanted to connect:%0A%0A👤 *Name:* ${encodeURIComponent(formData.name)}%0A📧 *Email:* ${encodeURIComponent(formData.email)}%0A💬 *Message:* ${encodeURIComponent(formData.message)}`;
+    const textMessage = `Hello Bhumika,%0A%0AI visited your portfolio and wanted to connect:%0A%0A👤 *Name:* ${encodeURIComponent(
+      formData.name,
+    )}%0A📧 *Email:* ${encodeURIComponent(
+      formData.email,
+    )}%0A💬 *Message:* ${encodeURIComponent(formData.message)}`;
 
     // Open WhatsApp Link
     const whatsappUrl = `https://wa.me/${MY_WHATSAPP_NUMBER}?text=${textMessage}`;
@@ -40,9 +44,10 @@ const Contact = () => {
       id: 1,
       title: "Email",
       value: "bhumikapatil0411@gmail.com",
-      link: "mailto:bhumikapatil0411@gmail.com",
+      link: "https://mail.google.com/mail/?view=cm&fs=1&to=bhumikapatil0411@gmail.com",
       icon: <FaEnvelope />,
       color: "#38bdf8",
+      isExternal: true,
     },
     {
       id: 2,
@@ -51,6 +56,7 @@ const Contact = () => {
       link: "tel:+918806061612",
       icon: <FaPhoneAlt />,
       color: "#4ade80",
+      isExternal: false,
     },
     {
       id: 3,
@@ -59,6 +65,7 @@ const Contact = () => {
       link: "https://www.linkedin.com/in/bhumika-patil11",
       icon: <FaLinkedin />,
       color: "#0a66c2",
+      isExternal: true,
     },
     {
       id: 4,
@@ -67,6 +74,7 @@ const Contact = () => {
       link: "https://github.com/Bhumika1104",
       icon: <FaGithub />,
       color: "#f43f5e",
+      isExternal: true,
     },
   ];
 
@@ -91,8 +99,8 @@ const Contact = () => {
                 <a
                   key={item.id}
                   href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={item.isExternal ? "_blank" : "_self"}
+                  rel={item.isExternal ? "noopener noreferrer" : undefined}
                   className="contact-item-link"
                 >
                   <div className="contact-small-card d-flex align-items-center p-3">
