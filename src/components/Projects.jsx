@@ -9,25 +9,65 @@ const Projects = () => {
   const projectsData = [
     {
       id: 1,
-      title: "Job Portal System",
+      title: "AI-Powered Job Portal with ATS Resume Matcher",
       image:
         "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&q=80",
       description:
         "An intelligent job application & recruitment portal built using Spring Boot and React to streamline hiring.",
-      techStack: ["Java", "Spring Boot", "React", "MySQL", "Tailwind CSS"],
+      techStack: [
+        "Java",
+        "Spring Boot",
+        "React",
+        "MySQL",
+        "Tailwind CSS",
+        "Google Gemini API",
+        "JUnit 5",
+        "REST APIs",
+      ],
       githubLink: "https://github.com/Bhumika1104/job-portal-system",
       demoVideo:
         "https://drive.google.com/file/d/1Qakh51Zp1iNzZnzVzG5hDEvBWpbFKtcy/view?usp=drive_link",
       screenshots: [
-        "https://github.com/Bhumika1104/job-portal-system/raw/main/screenshots/s1.jpg",
-        "https://github.com/Bhumika1104/job-portal-system/raw/main/screenshots/s2.jpg",
-        "https://github.com/Bhumika1104/job-portal-system/raw/main/screenshots/s4.jpg",
-        "https://github.com/Bhumika1104/job-portal-system/raw/main/screenshots/s8.jpg",
+        "https://github.com/user-attachments/assets/ca919ead-13a3-4af4-b201-ae8a8773a888",
+        "https://github.com/user-attachments/assets/002a78b9-f873-41f6-a9e8-41d0e43507b8",
+        "https://github.com/user-attachments/assets/1f22adc8-5f09-410f-9233-f335288ebf28",
+        "https://github.com/user-attachments/assets/b9cb947b-fb22-4f36-a143-80b8699187be",
+        "https://github.com/user-attachments/assets/8c156ab9-0c84-4d37-a395-015df3385fb2",
+        "https://github.com/user-attachments/assets/276d08a7-cb76-40ec-81aa-25243b058a4a",
+        "https://github.com/user-attachments/assets/f98d0a72-00ed-4dbb-ac51-a4f95fc5c533",
+        "https://github.com/user-attachments/assets/0451e9a7-aa77-4031-88d8-0501fdc481bc",
       ],
       color: "#38bdf8",
     },
     {
       id: 2,
+      title: "SplitSmart — Smart Bill Splitting",
+      image:
+        "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80",
+      description:
+        "A full-stack group expense management app to split bills and track shared balances easily.",
+      techStack: [
+        "Java",
+        "Spring Boot",
+        "React.js",
+        "Tailwind CSS",
+        "MySQL",
+        "Spring Security",
+        "JWT",
+        "REST APIs",
+      ],
+      githubLink: "https://github.com/Bhumika1104/SplitSmart-Bill-Splitter",
+      demoVideo: "https://github.com/Bhumika1104/SplitSmart-Bill-Splitter",
+      screenshots: [
+        "https://github.com/user-attachments/assets/e4cab6e6-705f-4186-9707-5d7faf3ef91f",
+        "https://github.com/user-attachments/assets/5738965a-1c04-4616-84da-5505c97e6ca7",
+        "https://github.com/user-attachments/assets/d594014e-5f49-4677-801e-2e596dffdd59",
+        "https://github.com/user-attachments/assets/4a8ed5ea-42df-4fea-9091-f97da6326755",
+      ],
+      color: "#f7df1e",
+    },
+    {
+      id: 3,
       title: "Codeverse Learning Portal",
       image:
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
@@ -45,15 +85,9 @@ const Projects = () => {
       demoVideo:
         "https://drive.google.com/file/d/1INIJDxTVewjFc_bL9nWrk6tyfTgSM2eo/view?usp=sharing",
       screenshots: [
-        "https://github.com/Bhumika1104/codeverse-learning-portal/raw/main/screenshots/1.jpg",
-        "https://github.com/Bhumika1104/codeverse-learning-portal/raw/main/screenshots/3.jpg",
-        "https://github.com/Bhumika1104/codeverse-learning-portal/raw/main/screenshots/4.jpg",
-        "https://github.com/Bhumika1104/codeverse-learning-portal/raw/main/screenshots/5.jpg",
-        "https://github.com/Bhumika1104/codeverse-learning-portal/raw/main/screenshots/6.jpg",
-        "https://github.com/Bhumika1104/codeverse-learning-portal/raw/main/screenshots/8.jpg",
-        "https://github.com/Bhumika1104/codeverse-learning-portal/raw/main/screenshots/9.jpg",
-        "https://github.com/Bhumika1104/codeverse-learning-portal/raw/main/screenshots/10.jpg",
-        "https://github.com/Bhumika1104/codeverse-learning-portal/raw/main/screenshots/14.jpg",
+        "https://raw.githubusercontent.com/Bhumika1104/codeverse-learning-portal/main/screenshots/1.jpg",
+        "https://raw.githubusercontent.com/Bhumika1104/codeverse-learning-portal/main/screenshots/3.jpg",
+        "https://raw.githubusercontent.com/Bhumika1104/codeverse-learning-portal/main/screenshots/4.jpg",
       ],
       color: "#6db33f",
     },
@@ -79,12 +113,20 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects-section">
-      <Container>
+      {/* Added fluid container or max-width container if needed, keeping original Container */}
+      <Container fluid className="px-4">
         <h2 className="section-title text-start mb-3">Projects</h2>
 
         <Row className="g-4 d-flex flex-wrap justify-content-center">
           {projectsData.map((project) => (
-            <Col key={project.id} xs={12} sm={6} lg={3} className="d-flex">
+            <Col
+              key={project.id}
+              xs={12}
+              sm={6}
+              md={6}
+              lg={3}
+              className="d-flex"
+            >
               <Card className="project-card text-start w-100 d-flex flex-column justify-content-between">
                 <div>
                   <div className="project-img-container">
@@ -141,7 +183,6 @@ const Projects = () => {
                       </a>
                     )}
 
-                    {/* MULTIPLE SCREENSHOTS BUTTON */}
                     {project.screenshots && project.screenshots.length > 0 && (
                       <button
                         onClick={() =>
@@ -179,7 +220,15 @@ const Projects = () => {
             <h4 className="mb-4 text-info">Project Screenshots</h4>
             <div className="screenshot-grid">
               {selectedScreenshots.map((imgUrl, index) => (
-                <img key={index} src={imgUrl} alt={`Screenshot ${index + 1}`} />
+                <img
+                  key={index}
+                  src={imgUrl}
+                  alt={`Screenshot ${index + 1}`}
+                  onError={(e) => {
+                    e.target.src =
+                      "https://via.placeholder.com/400x250?text=Image+Not+Found";
+                  }}
+                />
               ))}
             </div>
           </div>
